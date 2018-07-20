@@ -1,4 +1,5 @@
-{
+{ "results": [
+    {
     "id": 1,
     "name": "Black History Quiz",
     "description": "Black History Quiz",
@@ -159,4 +160,5 @@
             ]
         }
     ]
-}
+
+}]}

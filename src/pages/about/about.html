@@ -7,5 +7,16 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-slides pager>
+        <ion-slide *ngFor="let question of questionList" style="background-color: green">
+          <h2>{{question.name}}</h2>
+          <!-- <ion-list>
+              <button *ngFor="let answer of answerList">
+                {{answer.name}}
+              </button>  
+            </ion-list> -->
+          
+        </ion-slide>
+      </ion-slides>
 
 </ion-content>

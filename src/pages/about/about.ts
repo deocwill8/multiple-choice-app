@@ -7,12 +7,23 @@ import { QuestionsService } from '../../app/service'
   templateUrl: 'about.html'
 })
 export class AboutPage {
-questionData: any
+ 
+questionList: any
+answerList: any
+
   constructor(public navCtrl: NavController, public questionService: QuestionsService) {
+
     this.questionService.getData()
     .subscribe(questionData => {
-      this.questionData = questionData
-      console.log(this.questionData)
+      this.questionList = questionData.results[0].questions
+      console.log(this.questionList)
+      for(let answer in this.questionList){
+        this.answerList = answer
+        console.log(answer) //prints out a number
+      }
+      //console.log(this.answerList)
     })
   }
+
+
 }
