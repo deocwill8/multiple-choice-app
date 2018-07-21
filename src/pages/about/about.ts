@@ -9,7 +9,6 @@ import { QuestionsService } from '../../app/service'
 export class AboutPage {
  
 questionList: any
-answerList: any
 
   constructor(public navCtrl: NavController, public questionService: QuestionsService) {
 
@@ -17,11 +16,6 @@ answerList: any
     .subscribe(questionData => {
       this.questionList = questionData.results[0].questions
       console.log(this.questionList)
-      for(let answer in this.questionList){
-        this.answerList = answer
-        console.log(answer) //prints out a number
-      }
-      //console.log(this.answerList)
     })
   }
 

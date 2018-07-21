@@ -8,13 +8,15 @@
 
 <ion-content padding>
     <ion-slides pager>
+      <!-- quiz questions  -->
         <ion-slide *ngFor="let question of questionList" style="background-color: green">
           <h2>{{question.name}}</h2>
-          <!-- <ion-list>
-              <button *ngFor="let answer of answerList">
+           <!-- quiz answer options  -->
+          <ion-list>
+              <button *ngFor="let answer of question.options">
                 {{answer.name}}
               </button>  
-            </ion-list> -->
+            </ion-list>
           
         </ion-slide>
       </ion-slides>
