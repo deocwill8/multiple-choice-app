@@ -13,7 +13,7 @@
           <h2>{{question.name}}</h2>
            <!-- quiz answer options  -->
           <ion-list>
-              <button *ngFor="let answer of question.options">
+              <button *ngFor="let answer of question.options" (click)="checkAnswer(answer)">
                 {{answer.name}}
               </button>  
             </ion-list>
